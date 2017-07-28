@@ -1,0 +1,249 @@
+@charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	/*设置最小高度*/
+	min-height: 100%;
+}
+body{
+	/*参数三：背景图片水平方向的位置left right center  px或者%
+	 * 参数四：背景图片垂直方向的位置top bottom center px或者%
+	 */
+	background:#000000 url(../images/timg2.jpeg) no-repeat center center;
+	/*设置背景图片的大小 ，cover:正好覆盖容器
+	 * contain:正好包裹在容器内   px或%*/
+	background-size: cover;
+}
+.header{
+	width: 100%;
+	height: 70px;
+	background: black;
+	/*固定定位，参照物为当前窗口*/
+	position: fixed;
+	left:0;
+	top: 0;
+	z-index: 99;
+}
+ul,li{
+	/*去掉默认的样式*/
+	list-style: none;
+}
+.head{
+	width: 900px;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.head li{
+	float: left;
+}
+#icon{
+	width: 50px;
+	height: 50px;
+	border: 1px solid palegoldenrod;
+	border-radius:5px;
+	margin:9px 30px;
+}
+#music{
+	width: 50px;
+	height: 50px;
+	margin:8px 30px;
+	/*参数一：绑定在kkeyfream上的名称；参数二：动画执行时间；参数三：执行动画之前的延迟
+	 参数四：动画执行的次数infinite 无限大；参数五：动画的运动曲线ease linear（匀速）；参数六：动画是否反向执行*/
+	animation:xuanzhuan 2s infinite linear ;
+}
+@keyframes xuanzhuan{
+	from{transform: rotate(0);}
+	to{transform: rotate(360deg);}
+}
+
+#user{
+	height: 70px;
+	font-size: 16px;
+	color: white;
+	font-weight: bolder;
+	text-align: center;
+	/*当行高与高度保持一致时，字体会进行垂直居中显示*/
+	line-height: 70px;
+}
+
+.header .last{
+	float: right;
+}
+#time{
+	height: 70px;
+	line-height: 70px;
+	color: white;
+	font-weight: bolder;
+	font-size: 23px;
+	text-align: center;
+	
+}
+
+.banner{
+	/*绝对定位，参照物是具有定位属性的父元素*/
+	position: absolute;
+	left: 0;
+	top:70px;
+	width: 100%;
+	height: 700px;
+	background: url(../images/5.jpg) no-repeat center center;
+	background-size: 100%;
+	
+}
+.send{
+	position: absolute;
+	left: 0;
+	top:850px;
+	width: 100%;
+	margin-bottom: 30px;
+
+	
+}
+.send form{
+	width: 1000px;
+	margin: 0 auto;
+	
+}
+.send #description{
+	width: 100%;
+	height: 150px;
+	border: 1px solid pink;
+	font-size: 2px;
+}
+
+.send .borders1,.send .borders2{
+	display: block;
+	float: left;
+	width: 450px;
+	height: 50px;
+	border: 2px dotted gray;
+	background: white;
+	/*固定盒子的大小不变*/
+	box-sizing: border-box;
+	position: relative;
+}
+.send input[type=file]{
+	left: 0;
+	top: 0;
+	/*设置透明度  0：不显示   1：不透明*/
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+}
+.send span{
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 50px;
+	text-align: center;
+}
+.send .borders2{
+	float: right;
+}
+
+.send input[type=button]{
+	width: 100px;
+	height: 50px;
+	background: gray;
+	border: none;
+	font-size: 18px;
+	font-weight: bolder;
+}
+
+.content{
+	width: 100%;
+	height: 500px;
+	position: absolute;
+	left: 0px;
+	top: 1100px;
+	/*background: black;*/
+
+}
+#diary{
+	width:1000px;
+	margin: 0 auto;
+	background: antiquewhite;
+	border-radius: 25px;
+}
+.imgbox{
+	width: 950px;
+	height: 380px;
+	margin: 20px auto;
+	border: 1px solid burlywood;
+	padding: 5px;
+}
+.imgbox .imgbox-left,.imgbox .imgbox-right{
+	float: left;
+	overflow: hidden;
+}
+.imgbox .imgbox-left{
+	width: 670px;
+}
+.imgbox .images{
+	width: 100%;
+	height:380px;
+}
+.imgbox .imgbox-right{
+	border: 1px solid gray;
+	height: 380px;
+	width: 240px;
+	margin-left: 5px;
+}
+.delete{
+	float: right;
+	margin: 20px;
+	color: red;
+	font: 18px;
+	font-weight: bolder;
+	text-decoration: none;
+}
+.descript{
+	margin-top: 75px;
+	margin-left: 20px;
+	font-size: 15px;
+	color: grey;
+	background: yellow;
+}
+.iconbox{
+	width: 100%;
+	margin-top: 80px;
+	
+}
+.iconbox .imagess{ 
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin: 0 10px -10px 20px;
+}
+.iconbox .users,.iconbox .times{
+	font-size: 14px;
+	color: red;
+	margin-left: 20px;
+	
+}
+.share{
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.sharemusic{
+	font-size: 14px;
+	animation: changes 4s infinite;
+	
+}
+@keyframes changes{
+	from{color: palegoldenrod;}
+	25%{color: darkorange;}
+	50%{color: blue;}
+	75%{color: salmon;}
+	to{color: black;}
+}
+.downloads{
+	font-size: 14px;
+	margin-left: 30px;
+}
+
+
